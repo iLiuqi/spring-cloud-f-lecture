@@ -3,9 +3,12 @@ spring:
     name: service-feign
 
 server:
-  port: 8765
+  port: 8766
 
 eureka:
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.cloud.client.ip-address}:${spring.application.name}:${server.port}
   client:
     service-url:
       default-zone: http://localhost:8761/eureka/

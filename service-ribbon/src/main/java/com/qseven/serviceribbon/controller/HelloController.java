@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
+//@RibbonClient(name = "ribbonRule", configuration = RibbonRuleConfiguration.class)
 public class HelloController {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(HelloController.class);
